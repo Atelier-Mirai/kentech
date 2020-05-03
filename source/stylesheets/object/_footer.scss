@@ -1,11 +1,12 @@
 /* フッター */
-footer {
-  grid-row: foot;
+footer.footer {
+  grid-row: footer;
   // justify-self: center;
   // align-self: center;
   font-size: 15px;
   font-family: 'Dancing Script', cursive;
-  background: $sakurairo;
+  background: $kurohairo;
+  color: $shiroiro;
   grid-column: 1 / -1;
 
   display: grid;
@@ -17,11 +18,6 @@ footer {
   }
 }
 
-/* フッターのバー */
-// body::after {
-//   content: "";
-//   // background-color: $sakurairo;
-//   grid-column: 1 / -1;
-//   grid-row: foot;
-//   z-index: -1;
-// }
+/* デスクトップ版 */
+@media(min-width: 768px) {
+}

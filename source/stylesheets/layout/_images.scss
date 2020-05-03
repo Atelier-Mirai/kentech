@@ -1,0 +1,40 @@
+.image.container {
+  padding: 0;
+}
+
+.small.image {
+  width: 160px;
+  height: auto;
+}
+
+.medium.image {
+  width: 280px;
+  height: auto;
+}
+
+.large.image {
+  width: 400px;
+  height: auto;
+}
+
+.centered.image {
+  margin: 0 auto;
+}
+
+.fluid.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+.circular {
+  border-radius: 50% !important;
+}
+
+.centered.text {
+  text-align: center !important;
+}

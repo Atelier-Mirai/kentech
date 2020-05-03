@@ -1,16 +1,17 @@
+/* 表の為の飾り付け */
 table {
   border-collapse: collapse;
   th,
   td {
-    border: solid 1px $sumi;
+    border: solid 1px $kurohairo;
     padding: 20px;
   }
 
   th {
     width: 7em;
     text-align: center;
-    background: $kaki;
-    color: $geppaku;
+    background: $momijiiro;
+    color: $shirayuriiro;
   }
 
   td {

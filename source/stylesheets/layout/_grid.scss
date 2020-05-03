@@ -1,0 +1,28 @@
+// https://parashuto.com/rriver/development/cssgrid-autofill-vs-autofit
+.grid {
+  display: grid;
+}
+.small.width.auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.medium.width.auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.large.width.auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+.small.width.auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.medium.width.auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.large.width.auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
