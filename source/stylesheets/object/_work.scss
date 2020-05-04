@@ -2,8 +2,8 @@
 .work {
   grid-row: work;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 10px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 
   .title {
     grid-column: 1 / -1;
