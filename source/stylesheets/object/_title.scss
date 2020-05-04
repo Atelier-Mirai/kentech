@@ -5,7 +5,7 @@
 
 .title {
   padding: 0 20px;
-
+  margin-bottom: 10px;
   text-align: center;
   background: $kurohairo;
   color: $shiroiro;
@@ -13,6 +13,58 @@
   font-weight: normal;
   line-height: 1.5;
   text-align: center;
+}
+
+.left.arrow {
+  position: relative;
+  text-align: center;
+  padding-right: 15px;
+  display: block;
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 15px;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: 15px solid $natsukazeiro;
+    border-bottom: 15px solid $shinonomeiro;
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 30px;
+    width: 80%;
+    border-bottom: 3px solid $shinonomeiro;
+  }
+}
+
+.right.arrow {
+  position: relative;
+  text-align: center;
+  padding-right: 15px;
+  display: block;
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    right: 35px;
+    width: 0;
+    height: 0;
+    border: none;
+    border-right: 15px solid $natsukazeiro;
+    border-bottom: 15px solid $shinonomeiro;
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    right: 50px;
+    width: 80%;
+    border-bottom: 3px solid $shinonomeiro;
+  }
 }
 
 /* デスクトップ版 */

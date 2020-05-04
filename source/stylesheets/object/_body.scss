@@ -19,6 +19,11 @@ body > * {
   grid-column: 2 / -2;
 }
 
+body .explain,
+body .sns {
+  grid-column: 1 / -1;
+}
+
 /* 列の設定 */
 body.top {
   grid-template-rows:
