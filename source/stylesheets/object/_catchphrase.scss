@@ -1,6 +1,19 @@
 /* キャッチフレーズ */
 .catchphrase {
   grid-row: catchphrase;
+
+  h1 {
+    color: $kurohairo;
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-shadow: 0 0 5px $nibiiro;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  p {
+    text-align: center;
+  }
 }
 
 /* デスクトップ版 */

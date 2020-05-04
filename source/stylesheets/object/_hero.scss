@@ -4,13 +4,13 @@
   grid-row: hero;
   img {
     width: 100%;
-    height: 547px; // iPhone 6/7/8
+    height: 512px; /* iPhone 6/7/8 で、ちょうどきれいに見える高さ */
     object-fit: cover;
     vertical-align: bottom;
-    filter: brightness(70%);
-    z-index: -1;             // filter適用すると、重なり順が上に来るので、
-                             // z-indexで重なり順を下にする
-    position: relative;      // Safari で z-index 適用させるため
+    // filter: brightness(70%);
+    // z-index: -1;             // filter適用すると、重なり順が上に来るので、
+    //                          // z-indexで重なり順を下にする
+    // position: relative;      // Safari で z-index 適用させるため
   }
 }
 

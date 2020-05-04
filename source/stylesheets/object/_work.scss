@@ -1,6 +1,13 @@
 /* 施工事例 */
 .work {
-  display: work;
+  grid-row: work;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 10px;
+
+  .title {
+    grid-column: 1 / -1;
+  }
 }
 
 /* デスクトップ版 */

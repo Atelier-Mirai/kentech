@@ -1,52 +1,41 @@
-/* タイトル */
-.title {
-  grid-row: title;
-  justify-content: center;
-  align-self: center;
-  color: $sakurairo;
-  font-size: 44px;
-  font-weight: normal;
-  line-height: 1.2;
-  text-shadow: 0 0 5px $amairo;
-  text-align: center;
-  font-family: 'Dancing Script', cursive;
-}
+/* 見出し
+ * CSSのコピペだけ！おしゃれな見出しのデザイン例まとめ68選
+ * https://saruwakakun.com/html-css/reference/h-design
+ * ======================================================================= */
 
-/* サブタイトル */
-.subtitle {
-  grid-row: sub;
+.title {
+  padding: 0 20px;
+
   text-align: center;
-  a {
-    color: $sakurairo;
-    text-decoration: none;
-    border: solid 1px $sakurairo;
-    padding: 10px 40px;
-    display: inline-block;
-    margin-top: 10px;
-    border-radius: 10px;
-    background-color: rgba($amairo, 0.5);
-    &:hover {
-      background-color: rgba(darken($amairo, 20%), 0.7);
-    }
-  }
-  img {
-    width: 200px;
-  }
+  background: $kurohairo;
+  color: $shiroiro;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: center;
 }
 
 /* デスクトップ版 */
 @media(min-width: 768px) {
   .title {
-    grid-column: 2 / span 2;
-    max-width: 240px;
-  }
-
-  .subtitle {
-    grid-column: 4 / span 4;
-    align-self: center;
-    img {
-      width: 80%;
-      max-width: 320px;
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: inline-block;
+      width: 45px;
+      height: 2px;
+      background-color: $kurohairo;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
     }
   }
 }

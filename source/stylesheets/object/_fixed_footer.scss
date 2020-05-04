@@ -1,5 +1,33 @@
 /* 固定フッター */
-footer.fixed_footer {
+footer.fixed_footer nav {
+  justify-self: center;
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    /* 丸角四角形のボタンにする */
+    li {
+      width: 100%;
+      font-size: 20px;
+      line-height: 1.2;
+      padding: 6px 12px;
+      border-radius: 18px;
+      text-align: center;
+      background: $kurohairo;
+      &:hover {
+        background: $botaniro;
+      }
+      a {
+        text-decoration: none;
+        color: $shirayuriiro;
+      }
+    }
+  }
+
 }
 
 /* デスクトップ版 */

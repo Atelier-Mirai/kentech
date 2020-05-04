@@ -1,6 +1,10 @@
 section.work
-  h2 施工事例
-  = image_tag 'work1.png'
-  = image_tag 'work2.png'
-  = image_tag 'work3.png'
-  = image_tag 'work4.png'
+  h2.title 施工事例
+  figure
+    = image_tag 'work1.png'
+  figure
+    = image_tag 'work2.png', class: 'photo-frame sepia'
+  figure
+    = image_tag 'work3.png', class: 'photo-frame rotate3'
+  figure
+    = image_tag 'work4.png', class: 'photo-frame monochrome rotate-3'
