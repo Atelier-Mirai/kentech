@@ -28,25 +28,54 @@
 .image.container {
   padding: 0; }
 
+.mini.image {
+  width: 35px;
+  height: auto; }
+
+.tiny.image {
+  width: 80px;
+  height: auto; }
+
 .small.image {
-  width: 160px;
+  width: 150px;
   height: auto; }
 
 .medium.image {
-  width: 280px;
+  width: 150px;
   height: auto; }
 
 .large.image {
-  width: 400px;
+  width: 450px;
   height: auto; }
 
-.centered.image {
-  margin: 0 auto; }
+.big.image {
+  width: 600px;
+  height: auto; }
 
-.fluid.image img {
+.huge.image {
+  width: 800px;
+  height: auto; }
+
+.massive.image {
+  width: 960px;
+  height: auto; }
+
+.fluid.image {
   display: block;
   width: 100%;
   height: auto; }
+
+.rotate30.image {
+  transform: rotate(30deg); }
+
+.rotate-30.image {
+  transform: rotate(-30deg); }
+
+.sepia.image {
+  filter: sepia(100%); }
+
+.monochrome.image {
+  filter: grayscale(1); }
 
 .rounded {
   border-radius: 10px !important; }
@@ -56,3 +85,12 @@
 
 .centered.text {
   text-align: center !important; }
+
+.centered.image {
+  margin: 0 auto; }
+
+.p-r {
+  position: relative !important; }
+
+.p-a {
+  position: absolute !important; }

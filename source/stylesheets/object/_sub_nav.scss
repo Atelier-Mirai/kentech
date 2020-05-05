@@ -2,13 +2,35 @@
 nav.sub_nav {
   grid-row: sub_nav;
   justify-self: center;
-  align-self: end;
+  display: grid;
+  width: calc(100vw - 40px);
   ul {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-auto-flow: column;
-    column-gap: 20px;
+    row-gap: 20px;
+
+    li {
+      font-size: 20px;
+      line-height: 1.5;
+      padding: 6px 12px;
+      border-radius: 3px;
+      text-align: center;
+      background: $kurohairo;
+      &:hover {
+        background: $botaniro;
+      }
+      a {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        img {
+          grid-column: 1;
+        }
+        
+        text-decoration: none;
+        color: $shirayuriiro;
+      }
+    }
   }
 }
 

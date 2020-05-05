@@ -1,7 +1,22 @@
 nav.sub_nav
   ul
-    li = link_to '塗装の時期', 'repair.html'
-    li = link_to '塗装の種類と耐用年数', 'explain.html'
-    li = link_to '塗装費用について', 'price.html'
-    li = link_to '当社一押し特殊施行例', 'special_work.html'
-    li = link_to 'スタッフ募集中', 'recruit.html'
+    li
+      = link_to 'repair.html' do
+        = image_tag 'himawari.jpg', class: 'tiny rotate-30 image '
+        | 塗装の時期
+    li
+      = link_to 'explain.html' do
+        = image_tag 'himawari.jpg', class: 'tiny circular image '
+        | 塗装の種類と耐用年数'
+    li
+      = link_to 'price.html' do
+        = image_tag 'himawari.jpg', class: 'tiny image '
+        | 塗装費用について
+    li
+      = link_to 'special_work.html' do
+        = image_tag 'himawari.jpg', class: 'tiny sepia image '
+        | 当社一押し特殊施行例
+    li
+      = link_to 'recruit.html' do
+        = image_tag 'himawari.jpg', class: 'tiny monochrome rotate30 image '
+        | スタッフ募集中
