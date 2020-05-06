@@ -353,13 +353,12 @@ body.top {
 body > * {
   grid-column: 2 / -2; }
 
-body .explain,
-body .sns {
+body .explain {
   grid-column: 1 / -1; }
 
 /* 列の設定 */
 body.top {
-  grid-template-rows: [hero] auto [catchphrase] auto [main_nav] auto [network] auto [work] auto [explain] auto [sns] auto [sub_nav] auto [query] auto [footer] auto; }
+  grid-template-rows: [hero] auto [catchphrase] auto [main_nav] auto [network] auto [work] auto [explain] auto [sub_nav] auto [query] auto [footer] auto; }
 
 /* デスクトップ版 */
 /* キャッチフレーズ */
@@ -546,16 +545,16 @@ nav.main_nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-auto-flow: column;
-    column-gap: 10px; }
+    grid-auto-flow: row;
+    column-gap: 28px;
+    row-gap: 28px; }
     nav.main_nav ul li {
-      background-color: #ffec47;
-      border: 5px double #67a70c;
+      background-color: #0d0d0d;
       display: grid;
       align-items: center;
       justify-content: center;
-      width: 100px;
-      height: 100px;
+      width: 70px;
+      height: 70px;
       transform: rotate(45deg);
       overflow: hidden; }
       nav.main_nav ul li:hover {
@@ -563,7 +562,7 @@ nav.main_nav {
       nav.main_nav ul li a {
         transform: rotate(-45deg);
         text-decoration: none;
-        color: #67a70c;
+        color: #fef4f4;
         text-align: center; }
 
 /* デスクトップ版 */
@@ -627,7 +626,57 @@ nav.main_nav {
 
 /* お問い合わせ */
 .query {
-  grid-row: query; }
+  grid-row: query;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  row-gap: 10px; }
+  .query > * {
+    grid-column: 1 / -1; }
+  .query .telephone {
+    font-size: 36px;
+    font-weight: bold;
+    border: 8px double #0d0d0d;
+    margin: 20px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #0d0d0d; }
+  .query .logo {
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    justify-self: center; }
+    .query .logo .logo_mark {
+      grid-column: 1;
+      align-self: center;
+      height: 60px; }
+    .query .logo .logo_letter {
+      grid-column: 2;
+      align-self: center;
+      height: 36px; }
+  .query .address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px; }
+    .query .address > p:first-child {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center; }
+    .query .address .tel_and_fax {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: right; }
+    .query .address .mobile_phone {
+      grid-column: 2;
+      grid-row: 2;
+      text-align: left; }
+    .query .address > p:last-child {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      text-align: right;
+      margin-right: 2rem; }
 
 /* デスクトップ版 */
 /* SNS */
