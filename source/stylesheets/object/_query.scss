@@ -1,6 +1,75 @@
 /* お問い合わせ */
 .query {
   grid-row: query;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  row-gap: 10px;
+
+  & > * {
+    grid-column: 1 / -1;
+  }
+
+  .telephone {
+    font-size: 36px;
+    font-weight: bold;
+    border: 8px double $kurohairo;
+    margin: 20px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-decoration: none;
+    color: $kurohairo;
+  }
+
+  .logo {
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    justify-self: center;
+
+    .logo_mark {
+      grid-column: 1;
+      align-self: center;
+      height: 60px;
+    }
+    .logo_letter {
+      grid-column: 2;
+      align-self: center;
+      height: 36px;
+    }
+  }
+
+  .address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    
+    > p:first-child {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+    .tel_and_fax {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: right;
+    }
+    .mobile_phone {
+      grid-column: 2;
+      grid-row: 2;
+      text-align: left;
+    }
+    > p:last-child {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      text-align: right;
+      margin-right: 2rem;
+    }
+
+
+  }
+
 }
 
 /* デスクトップ版 */

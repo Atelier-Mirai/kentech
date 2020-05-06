@@ -1087,27 +1087,6 @@ nav.main_nav {
         text-decoration: none;
         color: #67a70c;
         text-align: center; }
-  nav.main_nav .diamond {
-    left: 0;
-    right: 0;
-    width: 141px;
-    height: 141px;
-    margin: auto;
-    background: #3676BD;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    overflow: hidden; }
-  nav.main_nav .diamond__inner {
-    position: absolute;
-    top: -29.5px;
-    left: -29.5px;
-    width: 200px;
-    height: 200px;
-    line-height: 200px;
-    color: #fff;
-    background: transparent;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
 
 /* デスクトップ版 */
 @media (min-width: 768px) {

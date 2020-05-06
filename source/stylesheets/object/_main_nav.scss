@@ -10,17 +10,17 @@ nav.main_nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows:    repeat(2, 1fr);
-    grid-auto-flow: column;
-    column-gap: 10px;
+    grid-auto-flow: row;
+    column-gap: 28px;
+    row-gap: 28px;
     li {
-      background-color: $nanowanairo;
-      border: 5px double $sanaeiro;
+      background-color: $kurohairo;
       // border-radius: 50%;
       display: grid;
       align-items: center;
       justify-content: center;
-      width: 100px;
-      height: 100px;
+      width: 70px;
+      height: 70px;
       transform: rotate(45deg);
       overflow: hidden;
       &:hover {
@@ -29,35 +29,11 @@ nav.main_nav {
       a {
         transform: rotate(-45deg);
         text-decoration: none;
-        color: $sanaeiro;
+        color: $sakurairo;
         text-align: center;
       }
     }
   }
-    .diamond {
-      left: 0;
-      right: 0;
-      width: 141px;
-      height: 141px;
-      margin: auto;
-      background: #3676BD;
-      transform: rotate(45deg);
-      overflow: hidden;
-    }
-
-    .diamond__inner {
-      position: absolute;
-      top: -29.5px;
-      left: -29.5px;
-      width: 200px;
-      height: 200px;
-      line-height: 200px;
-      color: #fff;
-      background: transparent;
-      transform: rotate(-45deg);
-    }
-
-
 }
 
 

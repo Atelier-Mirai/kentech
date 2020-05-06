@@ -19,8 +19,7 @@ body > * {
   grid-column: 2 / -2;
 }
 
-body .explain,
-body .sns {
+body .explain {
   grid-column: 1 / -1;
 }
 
@@ -33,7 +32,6 @@ body.top {
     [network]     auto
     [work]        auto
     [explain]     auto
-    [sns]         auto
     [sub_nav]     auto
     [query]       auto
     [footer]      auto;
