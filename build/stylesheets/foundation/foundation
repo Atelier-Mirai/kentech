@@ -1,3 +1,11 @@
+@charset "UTF-8";
+/*===============================
+  foundation
+  リセットCSS、NormarizeCSSなどの、すべてのベースとなるCSS
+===============================*/
+/*
+  modern-css-reset.css
+-------------------------------*/
 /* Box sizing rules */
 *,
 *::before,

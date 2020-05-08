@@ -1,7 +1,13 @@
+/*===============================
+  イメージの為の便利クラス
+===============================*/
+
+/*
+  イメージの為の便利クラス
+-------------------------------*/
 .image.container {
   padding: 0;
 }
-
 .mini.image {
   width: 35px;
   height: auto;
@@ -34,13 +40,11 @@
   width: 960px;
   height: auto;
 }
-
 .fluid.image {
   display: block;
   width: 100%;
   height: auto;
 }
-
 .rotate30.image {
   transform:rotate(30deg);
 }
@@ -56,15 +60,8 @@
 .rounded {
   border-radius: 10px !important;
 }
-
 .circular {
   border-radius: 50% !important;
-}
-
-
-
-.centered.text {
-  text-align: center !important;
 }
 .centered.image {
   margin: 0 auto;

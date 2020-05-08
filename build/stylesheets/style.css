@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/*===============================
+  スタイルシート
+===============================*/
+/*===============================
+  調整用のクラス
+  margin、padding、font-size、colorなどを付与するのに使用
+===============================*/
+/*
+  調整用のクラス
+  margin、padding、font-size、colorなどを付与するのに使用
+-------------------------------*/
 .m-0 {
   margin: 0 !important; }
 
@@ -292,6 +303,13 @@
   .mobile.only {
     display: none !important; } }
 
+/*===============================
+  foundation
+  リセットCSS、NormarizeCSSなどの、すべてのベースとなるCSS
+===============================*/
+/*
+  modern-css-reset.css
+-------------------------------*/
 /* Box sizing rules */
 *,
 *::before,
@@ -365,6 +383,17 @@ img:not([alt]) {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important; } }
 
+/*===============================
+  layout
+  パーツの配置や、ラッパーとしての幅や高さなどを決定するクラス
+===============================*/
+/*===============================
+  グリッド用の便利クラス
+  https://parashuto.com/rriver/development/cssgrid-autofill-vs-autofit
+===============================*/
+/*
+  グリッド用の便利クラス
+-------------------------------*/
 .grid {
   display: grid; }
 
@@ -392,6 +421,12 @@ img:not([alt]) {
 .large.width.auto-fit {
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); }
 
+/*===============================
+  イメージの為の便利クラス
+===============================*/
+/*
+  イメージの為の便利クラス
+-------------------------------*/
 .image.container {
   padding: 0; }
 
@@ -450,19 +485,27 @@ img:not([alt]) {
 .circular {
   border-radius: 50% !important; }
 
-.centered.text {
-  text-align: center !important; }
-
 .centered.image {
   margin: 0 auto; }
 
+/*===============================
+  position 設定
+===============================*/
+/*
+  position: relative !important;
+-------------------------------*/
 .p-r {
   position: relative !important; }
 
+/*
+  position: absolute !important;
+-------------------------------*/
 .p-a {
   position: absolute !important; }
 
-/* デスクトップ版 */
+/*
+  デスクトップの最大幅を1280pxに制限
+-------------------------------*/
 @media (min-width: 768px) {
   .hero,
   .main_nav,
@@ -476,6 +519,20 @@ img:not([alt]) {
     width: calc(100vw - 40px);
     max-width: 1280px; } }
 
+/*===============================
+  object
+  ページをまたいで使われる各種パーツを定義するクラス
+===============================*/
+/*
+  object
+  ページをまたいで使われる各種パーツを定義するクラス
+-------------------------------*/
+/*===============================
+  色の設定
+===============================*/
+/*
+  色の設定
+-------------------------------*/
 .kyohiiro {
   color: #ff251e !important; }
 
@@ -578,6 +635,12 @@ img:not([alt]) {
 .bg-natsukazeiro {
   background: transparent !important; }
 
+/*===============================
+  右矢印
+===============================*/
+/*
+  右矢印
+-------------------------------*/
 .right.arrow {
   position: relative;
   text-align: center;
@@ -611,6 +674,12 @@ img:not([alt]) {
     width: 90%;
     border-bottom: 3px solid #f19072; } }
 
+/*===============================
+  吹き出し
+===============================*/
+/*
+  吹き出し
+-------------------------------*/
 .balloon {
   border-radius: 50% !important;
   position: absolute;
@@ -625,6 +694,9 @@ img:not([alt]) {
   align-items: center;
   z-index: 10; }
 
+/*
+	吹き出し（小）
+-------------------------------*/
 .small.balloon {
   width: 110px;
   height: 110px;
@@ -645,7 +717,12 @@ img:not([alt]) {
   z-index: 10;
   transform: rotate(45deg); }
 
-/* ページ全体の設定 */
+/*===============================
+  body の レイアウト設定
+===============================*/
+/*
+  ページ全体の設定
+-------------------------------*/
 body.top {
   display: grid;
   grid-template-columns: 20px 1fr 20px;
@@ -655,16 +732,25 @@ body.top {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: #0d0d0d; }
 
-/* 各部品の配置 */
+/*
+  各部品の配置
+-------------------------------*/
 body.top > * {
   grid-column: 2 / -2; }
 
-/* 列の設定 */
+/*
+  列の設定
+-------------------------------*/
 body.top {
   grid-template-rows: [hero] auto [catchphrase] auto [main_nav] auto [network] auto [work] auto [explain] auto [sub_nav] auto [query] auto [footer] auto; }
 
 /* デスクトップ版 */
-/* キャッチフレーズ */
+/*===============================
+  キャッチフレーズ
+===============================*/
+/*
+  キャッチフレーズ
+-------------------------------*/
 .catchphrase {
   grid-row: catchphrase; }
   .catchphrase h1 {
@@ -686,9 +772,12 @@ body.top {
     margin: 20px 0px 30px;
     font-size: 18px; } }
 
-/*******************************
-            Divider
-*******************************/
+/*===============================
+  区切り
+===============================*/
+/*
+  夏風色の区切り
+-------------------------------*/
 .natsukazeiro.divider {
   margin: 1rem 0;
   line-height: 1;
@@ -698,6 +787,9 @@ body.top {
   border-top: 1px solid rgba(34, 36, 38, 0.15);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
 
+/*
+  桜色の区切り
+-------------------------------*/
 .sakurairo.divider {
   display: inline-block;
   width: 80%;
@@ -708,6 +800,12 @@ body.top {
   -webkit-tap-highlight-color: #fef4f4;
   border: 1px solid #fef4f4; }
 
+/*===============================
+  塗料の種類などの説明
+===============================*/
+/*
+  塗料の種類などの説明
+-------------------------------*/
 .explain {
   grid-row: explain;
   display: grid;
@@ -805,7 +903,12 @@ body.top {
         margin: 30px;
         text-align: center; } }
 
-/* 固定フッター */
+/*===============================
+  固定フッター
+===============================*/
+/*
+  固定フッター
+-------------------------------*/
 footer.fixed_footer nav ul {
   list-style: none;
   padding: 0;
@@ -829,7 +932,12 @@ footer.fixed_footer nav ul {
       color: #def3de; }
 
 /* デスクトップ版 */
-/* フッター */
+/*===============================
+  フッター
+===============================*/
+/*
+  フッター
+-------------------------------*/
 footer.footer.mobile.only {
   grid-row: footer;
   grid-column: 1 / -1; }
@@ -904,7 +1012,12 @@ footer.footer.mobile.only {
       color: #ede9d8;
       text-align: center; } }
 
-/* お問い合わせフォーム */
+/*===============================
+  お問い合わせフォーム
+===============================*/
+/*
+  お問い合わせフォーム
+-------------------------------*/
 form p {
   margin-bottom: 20px; }
 
@@ -928,7 +1041,12 @@ form input[type="submit"] {
     width: 250px; } }
 
 /* デスクトップ版 */
-/* ヘッダー */
+/*===============================
+  ヘッダー
+===============================*/
+/*
+  ヘッダー
+-------------------------------*/
 header {
   grid-row: head;
   justify-self: center;
@@ -944,7 +1062,12 @@ header {
   header {
     justify-self: start; } }
 
-/* ヒーローイメージ */
+/*===============================
+  ヒーローイメージ
+===============================*/
+/*
+  ヒーローイメージ
+-------------------------------*/
 .hero {
   grid-row: hero;
   grid-column: 1 / -1; }
@@ -956,7 +1079,12 @@ header {
     vertical-align: bottom; }
 
 /* デスクトップ版 */
-/* メインナビゲーションメニュー */
+/*===============================
+  メインナビゲーションメニュー
+===============================*/
+/*
+  メインナビゲーションメニュー
+-------------------------------*/
 nav.main_nav {
   grid-row: main_nav;
   display: grid; }
@@ -1000,7 +1128,12 @@ nav.main_nav {
         height: 80px;
         font-size: 1rem; } }
 
-/* ネットワーク */
+/*===============================
+  ワーキングネットワーク
+===============================*/
+/*
+  ワーキングネットワーク
+-------------------------------*/
 .network {
   grid-row: network;
   display: grid;
@@ -1068,9 +1201,14 @@ nav.main_nav {
         border-radius: 50%;
         text-align: center; } }
 
-/* 写真の額縁
- * 【CSS3】で写真に色々装飾を加えてみた http://taneppa.net/css3_01/
- * ======================================================================= */
+/*===============================
+  写真用額縁
+  CSS3で写真に色々装飾を加えてみた
+  http://taneppa.net/css3_01/
+===============================*/
+/*
+  写真用額縁
+-------------------------------*/
 .photo-frame {
   padding: 7px;
   border: 1px solid #efe0e8;
@@ -1078,19 +1216,36 @@ nav.main_nav {
   box-shadow: 1px 1px 5px rgba(158, 161, 163, 0.2);
   /* 横位置 縦位置 ぼかし幅 色 */ }
 
+/*
+  写真用額縁（セピア）
+-------------------------------*/
 .photo-frame.sepia {
   filter: sepia(100%); }
 
+/*
+  写真用額縁（モノクローム）
+-------------------------------*/
 .photo-frame.monochrome {
   filter: grayscale(1); }
 
+/*
+  写真用額縁（少し回転）
+-------------------------------*/
 .photo-frame.rotate3 {
   transform: rotate(3deg); }
 
+/*
+  写真用額縁（少し逆回転）
+-------------------------------*/
 .photo-frame.rotate-3 {
   transform: rotate(-3deg); }
 
-/* お問い合わせ */
+/*===============================
+  お問い合わせ欄
+===============================*/
+/*
+  お問い合わせ欄
+-------------------------------*/
 .query {
   grid-row: query;
   display: grid;
@@ -1145,7 +1300,12 @@ nav.main_nav {
       margin-right: 2rem; }
 
 /* デスクトップ版 */
-/* サブナビゲーションメニュー */
+/*===============================
+  サブナビゲーションメニュー
+===============================*/
+/*
+  サブナビゲーションメニュー
+-------------------------------*/
 nav.sub_nav {
   grid-row: sub_nav;
   display: grid; }
@@ -1206,7 +1366,12 @@ nav.sub_nav {
           grid-column: 1;
           padding-right: 10px; } }
 
-/* 表の為の飾り付け */
+/*===============================
+  表の飾り付け
+===============================*/
+/*
+  表の飾り付け
+-------------------------------*/
 table {
   border-collapse: collapse; }
   table th,
@@ -1221,6 +1386,12 @@ table {
   table td {
     background: #2ca9e1; }
 
+/*===============================
+  テキストの為の飾り付け
+===============================*/
+/*
+  テキストの為の飾り付け
+-------------------------------*/
 .mini.text {
   font-size: 0.4rem !important; }
 
@@ -1248,15 +1419,22 @@ table {
 .lead.text {
   font-size: 1.1rem; }
 
+.centered.text {
+  text-align: center !important; }
+
 /* デスクトップ版 */
 @media (min-width: 768px) {
   .lead.text {
     font-size: 1.5rem; } }
 
-/* 見出し
- * CSSのコピペだけ！おしゃれな見出しのデザイン例まとめ68選
- * https://saruwakakun.com/html-css/reference/h-design
- * ======================================================================= */
+/*===============================
+  見出し
+  CSSのコピペだけ！おしゃれな見出しのデザイン例まとめ68選
+  https://saruwakakun.com/html-css/reference/h-design
+===============================*/
+/*
+  見出し
+-------------------------------*/
 .title {
   position: relative;
   text-align: center;
@@ -1288,7 +1466,12 @@ table {
   .title::after {
     right: 0; } }
 
-/* 施工事例 */
+/*===============================
+  施工事例
+===============================*/
+/*
+  施工事例
+-------------------------------*/
 .work {
   grid-row: work;
   display: grid;

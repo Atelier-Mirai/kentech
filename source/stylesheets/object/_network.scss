@@ -1,4 +1,10 @@
-/* ネットワーク */
+/*===============================
+  ワーキングネットワーク
+===============================*/
+
+/*
+  ワーキングネットワーク
+-------------------------------*/
 .network {
   grid-row: network;
   display: grid;
@@ -44,9 +50,6 @@
 /* デスクトップ版 */
 @media(min-width: 768px) {
   .network {
-      // margin: 0 auto;
-      // width: calc(100vw - 40px);
-      // max-width:    1280px;
 
     .kentech_working_network {
       text-align: center;
