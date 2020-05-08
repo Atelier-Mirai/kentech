@@ -1,14 +1,13 @@
 /* 固定フッター */
 footer.fixed_footer nav {
-  justify-self: center;
   ul {
     list-style: none;
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
+    gap: 20px;
+
     /* 丸角四角形のボタンにする */
     li {
       width: 100%;
@@ -27,7 +26,6 @@ footer.fixed_footer nav {
       }
     }
   }
-
 }
 
 /* デスクトップ版 */

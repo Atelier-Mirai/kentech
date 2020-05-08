@@ -1,6 +1,11 @@
 /* ネットワーク */
 .network {
   grid-row: network;
+  display: grid;
+  grid-template-columns: 1fr;
+  .title {
+    grid-column: 1 / -1;
+  }
 
   .kentech_working_network {
     text-align: center;
@@ -34,10 +39,50 @@
       text-align: center;
     }
   }
-
-
 }
 
 /* デスクトップ版 */
 @media(min-width: 768px) {
+  .network {
+      // margin: 0 auto;
+      // width: calc(100vw - 40px);
+      // max-width:    1280px;
+
+    .kentech_working_network {
+      text-align: center;
+      margin-top: 12px;
+      color: $kurohairo;
+      .kentech {
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        margin-bottom: -5px;
+      }
+      .working_network {
+        font-size: 16px;
+        margin-bottom: 1rem;
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows:    repeat(3, 1fr);
+      max-width: 80%;
+      margin: 0 auto;
+      padding: 0;
+      gap: 0px 0px;
+      li {
+        font-size: 18px;
+        background: lighten($amairo, 30%);
+        border: 1px solid $ayameiro;
+        padding: 16px 2px;
+        border-radius: 50%;
+        text-align: center;
+      }
+    }
+    margin-bottom: 1rem;
+  }
 }

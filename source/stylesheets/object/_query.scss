@@ -44,7 +44,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     gap: 10px;
-    
+
     > p:first-child {
       grid-column: 1 / -1;
       grid-row: 1;
@@ -66,10 +66,7 @@
       text-align: right;
       margin-right: 2rem;
     }
-
-
   }
-
 }
 
 /* デスクトップ版 */

@@ -3,3 +3,19 @@
 @import "grid";
 @import "images";
 @import "position";
+
+/* デスクトップ版 */
+@media(min-width: 768px) {
+  .hero,
+  .main_nav,
+  .network,
+  .work,
+  .explain,
+  .sub_nav,
+  .query,
+  .footer {
+    margin: 0 auto;
+    width: calc(100vw - 40px);
+    max-width:    1280px;
+  }
+}

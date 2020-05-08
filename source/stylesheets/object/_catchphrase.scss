@@ -1,7 +1,6 @@
 /* キャッチフレーズ */
 .catchphrase {
   grid-row: catchphrase;
-
   h1 {
     color: $kurohairo;
     font-size: 48px;
@@ -18,4 +17,13 @@
 
 /* デスクトップ版 */
 @media(min-width: 768px) {
+  .catchphrase {
+    h1 {
+      margin-top: 20px;
+    }
+    p {
+      margin: 20px 0px 30px;
+      font-size: 18px;
+    }
+  }
 }

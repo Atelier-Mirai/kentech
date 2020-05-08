@@ -47,17 +47,4 @@ $colors: (
   .bg-#{$name} {
     background: $value !important;
   }
-  .#{$name}.button {
-    color: $value;
-    text-decoration: none;
-    border: solid 1px $value;
-    padding: 10px;
-    display: inline;
-    text-align: center;
-    border-radius: 10px;
-    background: rgba(lighten($value, 33%), 0.7);
-    &:hover {
-      background: rgba(darken($value, 20%), 0.7);
-    }
-  }
 }

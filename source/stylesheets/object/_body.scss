@@ -3,6 +3,7 @@ body.top {
   display: grid;
   grid-template-columns: 20px 1fr 20px;
   row-gap: 20px;
+
   /* 2020年に最適なfont-familyの書き方 */
   /* https://ics.media/entry/200317/ */
   font-family: "Helvetica Neue",
@@ -15,12 +16,8 @@ body.top {
 }
 
 /* 各部品の配置 */
-body > * {
+body.top > * {
   grid-column: 2 / -2;
-}
-
-body .explain {
-  grid-column: 1 / -1;
 }
 
 /* 列の設定 */
@@ -40,39 +37,3 @@ body.top {
 /* デスクトップ版 */
 @media(min-width: 768px) {
 }
-
-// /* 列の設定 (サイトページ)*/
-// body.post {
-//   grid-template-rows:
-//     [head] 100px
-//     [kiji] auto
-//     [submenu] auto
-//     [foot] 100px;
-// }
-//
-// /* デスクトップ版 */
-// @media(min-width: 768px) {
-//   body.top {
-//     grid-template-columns: 0.2fr repeat(6, 1fr) 0.2fr;
-//     grid-template-rows:
-//       [head] 100px
-//       [title sub] auto
-//       [recent] auto
-//       [foot] 100px;
-//     column-gap: 5%;
-//   }
-//   body.site {
-//     grid-template-columns: 0.2fr repeat(6, 1fr) 0.2fr;
-//     grid-template-rows:
-//       [head] 100px
-//       [kiji submenu] auto
-//       [foot] 100px;
-//     column-gap: 5%;
-//     article {
-//       grid-column: 2 / span 4;
-//     }
-//     .submenu {
-//       grid-column: 6 / span 2;
-//     }
-//   }
-// }

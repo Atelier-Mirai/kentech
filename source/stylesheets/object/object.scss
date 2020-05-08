@@ -1,6 +1,8 @@
 // ページをまたいで使われる各種パーツを定義するクラス
 
 @import "iro";
+
+@import "arrow";
 @import "balloon";
 @import "body";
 @import "catchphrase";
@@ -15,9 +17,8 @@
 @import "network";
 @import "photo";
 @import "query";
-@import "section";
-@import "sns";
 @import "sub_nav";
 @import "table";
+@import "text";
 @import "title";
 @import "work";

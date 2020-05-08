@@ -4,83 +4,37 @@
  * ======================================================================= */
 
 .title {
-  padding: 0 20px;
-  margin-bottom: 10px;
-  text-align: center;
-  background: $kurohairo;
-  color: $shiroiro;
-  font-size: 22px;
-  font-weight: normal;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.left.arrow {
   position: relative;
   text-align: center;
-  padding-right: 15px;
-  display: block;
-  &::before {
-    position: absolute;
-    content: '';
-    bottom: -3px;
-    left: 15px;
-    width: 0;
-    height: 0;
-    border: none;
-    border-left: 15px solid $natsukazeiro;
-    border-bottom: 15px solid $shinonomeiro;
-  }
-  &::after {
-    position: absolute;
-    content: '';
-    bottom: -3px;
-    left: 30px;
-    width: 80%;
-    border-bottom: 3px solid $shinonomeiro;
-  }
-}
+  width: 100%;
+  margin-bottom: 1rem;
+  span {
+    background: $kurohairo;
+    color: $shiroiro;
 
-.right.arrow {
-  position: relative;
-  text-align: center;
-  padding-right: 15px;
-  display: block;
-  &::before {
-    position: absolute;
-    content: '';
-    bottom: -3px;
-    right: 35px;
-    width: 0;
-    height: 0;
-    border: none;
-    border-right: 15px solid $natsukazeiro;
-    border-bottom: 15px solid $shinonomeiro;
-  }
-  &::after {
-    position: absolute;
-    content: '';
-    bottom: -3px;
-    right: 50px;
-    width: 80%;
-    border-bottom: 3px solid $shinonomeiro;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.5;
+    display: inline-block;
+    width: calc(100vw - 40px);
   }
 }
 
 /* デスクトップ版 */
 @media(min-width: 768px) {
   .title {
-    position: relative;
-    display: inline-block;
-    padding: 0 55px;
+    span {
+      width: 400px;
+    }
+
     &::before,
     &::after {
       content: '';
       position: absolute;
       top: 50%;
       display: inline-block;
-      width: 45px;
-      height: 2px;
+      width: calc((100vw - 440px) / 2);
+      height: 3px;
       background-color: $kurohairo;
     }
     &::before {

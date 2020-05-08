@@ -12,4 +12,14 @@
 
 /* デスクトップ版 */
 @media(min-width: 768px) {
+  .work {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 1rem;
+    figure {
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
 }

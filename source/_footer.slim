@@ -1,3 +1,47 @@
-footer.footer
+footer.footer.mobile.only
   p
-    | Copyright 令和二年 ©️ KENTECH
+    | Copyright ©️ 令和二年 KENTECH
+
+footer.footer.computer.only
+  .logo_and_nav
+    .logo
+      = image_tag 'logo_mark.png', class: 'logo_mark'
+
+    nav.footer_nav
+      ul
+        li
+          = link_to 'index.html' do
+            | ホーム
+        li
+          = link_to 'service.html' do
+            | 塗装
+            br
+            | メニュー
+        li
+          = link_to 'work.html' do
+            | 施工事例
+        li
+          = link_to  'flow.html' do
+            | 施工の
+            br
+            | 流れ
+        li
+          = link_to 'about.html' do
+            | 会社概要
+        li
+          = link_to 'contact.html' do
+            | お問い
+            br
+            | 合わせ
+
+
+  .address
+    p 〒455-0042 名古屋市港区左野町3丁目27番地203
+    p
+      | Tel & Fax &nbsp;
+      =>  link_to '052-384-7221', 'tel:052-384-7221'
+      | Mobile Phone &nbsp;
+      => link_to '090-1234-5678', 'tel:090-1234-5678'
+
+  p
+    | Copyright ©️ 令和二年 KENTECH
