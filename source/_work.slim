@@ -1,11 +1,38 @@
 section.work
+  /! スライドショー用 colorbox
+  = stylesheet_link_tag 'lib/colorbox/colorbox.css'
+  = javascript_include_tag 'lib/colorbox/jquery.colorbox-min.js'
+  = javascript_include_tag 'lib/colorbox/jquery.colorbox-ja.js'
+
+  javascript:
+    $(function(){
+      $(".gallery").colorbox({
+        rel: 'gallery',
+        // slideshow: true,
+        slideshowSpeed: 3000,
+        maxWidth: "90%",
+        minHeight: "90%",
+        opacity: 0.7
+      });
+    });
+
   h2.title
     span 施工事例
-  figure
-    = image_tag 'work1.png'
-  figure
-    = image_tag 'work2.png', class: 'photo-frame sepia'
-  figure
-    = image_tag 'work3.png', class: 'photo-frame rotate3'
-  figure
-    = image_tag 'work4.png', class: 'photo-frame monochrome rotate-3'
+
+  a.gallery href="../images/work1.png" title="施工例1"
+    img alt="" src="../images/thumbs/work1_thumb.png" class="w-100"
+  a.gallery href="../images/work2.png" title="施工例2"
+    img alt="" src="../images/thumbs/work2_thumb.png" class="photo-frame sepia w-100"
+  a.gallery href="../images/work3.png" title="施工例3"
+    img alt="" src="../images/thumbs/work3_thumb.png" class="photo-frame rotate3 w-100"
+  a.gallery href="../images/work4.png" title="施工例4"
+    img alt="" src="../images/thumbs/work4_thumb.png" class="photo-frame monochrome rotate-3 w-100"
+
+  / figure
+  /   = image_tag 'work1.png'
+  / figure
+  /   = image_tag 'work2.png', class: 'photo-frame sepia'
+  / figure
+  /   = image_tag 'work3.png', class: 'photo-frame rotate3'
+  / figure
+  /   = image_tag 'work4.png', class: 'photo-frame monochrome rotate-3'

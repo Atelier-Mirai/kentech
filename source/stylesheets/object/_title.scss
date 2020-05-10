@@ -38,6 +38,7 @@
       top: 50%;
       display: inline-block;
       width: calc((100vw - 440px) / 2);
+      max-width: 440px;
       height: 3px;
       background-color: $kurohairo;
     }
