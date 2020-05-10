@@ -1,3 +1,16 @@
+/! 100pxスクロールしたら表示
+javascript:
+  $(function(){
+    $(".fixed_footer").hide();
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+        $(".fixed_footer").fadeIn();
+      } else {
+        $(".fixed_footer").fadeOut();
+      }
+    });
+  });
+
 footer.fixed_footer.mobile.only
   nav
     ul
