@@ -593,6 +593,422 @@ header {
     vertical-align: bottom; }
 
 /* デスクトップ版 */
+/*=============================================================================
+  Garden
+=============================================================================*/
+/*-----------------------------------------------------------------------------
+  html
+-----------------------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  font-size: 62.5%;
+  /* レスポンシブな文字サイズ */
+  /* 今すぐ使えるCSSレシピブック 96より */
+  font-size: 14px; }
+  @media (min-width: 320px) {
+    html {
+      font-size: calc( (18 - 14) * ((100vw - 320px) / (960 - 320)) + 14px); } }
+  @media (min-width: 960px) {
+    html {
+      font-size: 18px; } }
+/*-----------------------------------------------------------------------------
+  mobile / computer utility
+-----------------------------------------------------------------------------*/
+@media (min-width: 768px) {
+  .mobile.only {
+    display: none; } }
+
+@media (max-width: 767.98px) {
+  .computer.only {
+    display: none; } }
+
+/*-----------------------------------------------------------------------------
+  本文
+-----------------------------------------------------------------------------*/
+.literature {
+  padding-left: 20px;
+  padding-right: 20px; }
+  .literature h3 {
+    font-size: 1.4rem; }
+  .literature article {
+    margin-bottom: 1rem; }
+    .literature article p {
+      line-height: 2;
+      font-size: 1rem;
+      text-indent: 1rem; }
+
+/*-----------------------------------------------------------------------------
+  header
+-----------------------------------------------------------------------------*/
+header {
+  display: grid;
+  /* Mobile */
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr;
+  justify-content: center;
+  /* Computer */ }
+  header .logo {
+    grid-row: 1;
+    justify-self: center;
+    align-self: center; }
+    header .logo img {
+      width: 80px;
+      height: auto; }
+  header .gnavi {
+    grid-row: 2;
+    justify-self: center;
+    align-self: center; }
+  @media (min-width: 768px) {
+    header {
+      grid-template-columns: 1fr 6fr;
+      justify-content: center; }
+      header .logo {
+        grid-column: 1;
+        justify-self: center;
+        align-self: center; }
+        header .logo img {
+          width: 80px;
+          height: auto; }
+      header .gnavi {
+        grid-column: 2;
+        justify-self: center;
+        align-self: center; } }
+/*-----------------------------------------------------------------------------
+  Global Navigation
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+  Global Navigation
+-----------------------------------------------------------------------------*/
+/*
+  mobile
+-----------------------------------------------------------------------------*/
+.gnavi {
+  background: #fef4f4;
+  width: 100%; }
+  .gnavi ul {
+    display: block;
+    padding: 0; }
+    .gnavi ul li {
+      display: block;
+      width: 100%; }
+      .gnavi ul li a {
+        font-size: 1.4rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 0; }
+
+@media (min-width: 768px) {
+  .gnavi {
+    display: block;
+    height: auto;
+    padding-top: 20px;
+    background: transparent; }
+    .gnavi ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-auto-flow: column; }
+      .gnavi ul li {
+        text-align: center;
+        border-bottom: none; }
+        .gnavi ul li a {
+          position: relative;
+          color: #9ea1a3;
+          text-decoration: none;
+          text-align: center;
+          padding: 10px 0; }
+          .gnavi ul li a:before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            background: #e7609e;
+            height: 2px;
+            transition-property: left, right;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out; }
+          .gnavi ul li a:hover:before {
+            left: 0;
+            right: 0; } }
+
+/*-----------------------------------------------------------------------------
+  Page Top
+-----------------------------------------------------------------------------*/
+.pagetop {
+  background: #0d0d0d;
+  text-align: center; }
+  .pagetop a {
+    color: #fef4f4;
+    text-decoration: none;
+    padding: 10px 0; }
+
+/*-----------------------------------------------------------------------------
+  固定フッター (モバイル用)
+-----------------------------------------------------------------------------*/
+#fixed_footer {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  bottom: -70px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0.3s; }
+  #fixed_footer.active {
+    bottom: 0; }
+    #fixed_footer.active span {
+      display: inline-block;
+      margin: 6px 0; }
+  #fixed_footer nav {
+    bottom: -70px;
+    /* 各書籍へのリンク */
+    /* 電話をかける */ }
+    #fixed_footer nav ul {
+      overflow: hidden;
+      margin: 0 -1px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-flow: column; }
+      #fixed_footer nav ul li a {
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        background: #0d0d0d;
+        padding-top: 12px;
+        color: #fef4f4;
+        font-size: 11px;
+        height: 60px;
+        border-left: 1px solid #fef4f4;
+        position: relative; }
+        #fixed_footer nav ul li a span {
+          display: inline-block;
+          margin: 12px 0; }
+      #fixed_footer nav ul li a::after {
+        content: "";
+        display: block;
+        border: 5px solid transparent;
+        border-left-color: #67a70c;
+        border-top-color: #67a70c;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 0;
+        top: 0; }
+    #fixed_footer nav .telephone {
+      background: #0d0d0d;
+      text-align: center;
+      border-top: 1px solid #fef4f4; }
+      #fixed_footer nav .telephone a {
+        color: #fef4f4;
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+        padding: 10px; }
+        #fixed_footer nav .telephone a small {
+          display: block;
+          font-size: 9px; }
+
+/*-----------------------------------------------------------------------------
+  コンピュータ用 追随メニュー
+-----------------------------------------------------------------------------*/
+.follow_contact {
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  z-index: 10000; }
+  .follow_contact ul {
+    list-style: none; }
+    .follow_contact ul li a {
+      font-size: 0.9rem;
+      text-align: center;
+      text-decoration: none;
+      color: #fef4f4;
+      display: block;
+      width: 100px;
+      height: 100px;
+      padding: 30px 0;
+      line-height: 20px;
+      border-radius: 50px;
+      border: 1px solid #f19072;
+      background: #f19072;
+      position: relative; }
+      .follow_contact ul li a:hover::after {
+        opacity: 1;
+        border-width: 7px; }
+    .follow_contact ul li a::after {
+      content: "";
+      display: block;
+      width: 98px;
+      height: 98px;
+      border: 0 solid #fef4f4;
+      border-radius: 50px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      box-sizing: border-box;
+      opacity: 0;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease; }
+
+@media only screen and (max-width: 767px) {
+  #sp_menu {
+    display: block; }
+  .follow_contact {
+    display: none; }
+  .f_nav {
+    padding: 0 15px; }
+  .f_menu {
+    display: none; }
+  .l-footer {
+    padding-bottom: 70px; }
+  .f_sns {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px; }
+  .sp_f_nav {
+    display: block; }
+  #ttl_line {
+    width: 100% !important; }
+  .lower_ttl {
+    position: relative;
+    padding: 45px 0 25px;
+    margin-bottom: 50px; }
+  .home .l-header {
+    top: 0;
+    opacity: 1; }
+  .f_info_tel span {
+    display: none; }
+  .f_bnr .btn {
+    display: none; } }
+
+#sp_menu {
+  background: 0 no-repeat center center;
+  background-size: auto 30%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease; }
+
+.l-footer {
+  width: 100%;
+  position: relative;
+  background: #fef4f4; }
+  .l-footer .copyright {
+    text-align: center;
+    font-size: 13px;
+    margin: 30px auto; }
+
+.f_info {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 40px auto; }
+  .f_info a {
+    color: _mine_shaft_approx;
+    text-decoration: none; }
+    .f_info a:hover {
+      text-decoration: underline; }
+
+.f_info_logo {
+  font-size: 16px;
+  font-weight: normal; }
+
+.f_info_tel_fax {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px; }
+  .f_info_tel_fax a {
+    color: #0d0d0d;
+    text-decoration: none; }
+  .f_info_tel_fax .fa {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 7px; }
+
+.f_info_tel {
+  display: inline-block; }
+
+.f_info_fax {
+  display: inline-block;
+  margin-left: 40px; }
+  .f_info_fax .fa {
+    font-size: 16px; }
+
+.f_nav {
+  padding: 0 60px;
+  margin: 30px auto; }
+
+.f_bnr .btn {
+  font-size: 15px;
+  font-weight: 500; }
+  .f_bnr .btn a {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    border-radius: 0;
+    display: block;
+    background: #9ea1a3;
+    color: #fef4f4;
+    padding: 10px 25px;
+    text-align: left;
+    text-decoration: none; }
+    .f_bnr .btn a .fa {
+      margin-right: 15px;
+      vertical-align: middle; }
+
+.f_bnr li + li {
+  margin-top: 10px; }
+
+.f_bnr .btn_contact a:hover {
+  background: #67a70c; }
+
+.f_bnr .btn_event a:hover {
+  background: #f19072; }
+
+.lower_ttl_sub {
+  font-size: 14px;
+  margin: 15px auto 20px;
+  text-align: center; }
+
+@media only screen and (min-width: 1110px) {
+  .f_info_tel a {
+    display: none; } }
+
+.lower_ttl {
+  position: relative;
+  padding: 90px 0 50px;
+  margin-bottom: 100px; }
+
+.lower_ttl_main::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 0;
+  margin: 0 auto 12px;
+  border-top: 3px solid #f3cccc; }
+
+#ttl_line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #f3cccc; }
+
 /*===============================
   メインナビゲーションメニュー
 ===============================*/
