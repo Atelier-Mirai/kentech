@@ -13,6 +13,8 @@ set :relative_links, true
 # レイアウト
 set :layout, 'site'
 page 'index.html', layout: 'top'
+# page 'garden.html', layout: false
+page 'no_layout.html', layout: false
 page 'no_layout.html', layout: false
 
 # ビルド時の設定

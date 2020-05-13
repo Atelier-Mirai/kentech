@@ -1,0 +1,945 @@
+//colors
+$white_90: rgba(255, 255, 255, 0.9);
+$color_silver_approx: #ccc;
+$black: #000;
+$white: #fff;
+$color_mine_shaft_approx: #333333;
+$color_cod_gray_approx: #111111;
+$color_coral_reef_approx: #c9bc9c;
+$color_sushi_approx: #8bc34a;
+$color_sea_buckthorn_approx: #ffa726;
+$color_keppel_approx: #34acac;
+$color_well_read_approx: #ab3333;
+
+//fonts
+$font_0: "monospace";
+$font_1: "游ゴシック";
+$font_2: "YuGothic";
+$font_3: "Yu Gothic";
+$font_4: "ヒラギノ角ゴ Pro W3";
+$font_5: "Hiragino Kaku Gothic Pro";
+$font_6: "メイリオ";
+$font_7: "Meiryo";
+$font_8: "Verdana";
+$font_9: "sans-serif";
+$font_10: "Hind";
+$font_11: "Oswald";
+$font_12: "FontAwesome";
+
+//urls
+$url_0: url(./icon/sp_menu01.png);
+$url_1: url(./icon/sp_calendar01.png);
+$url_2: url(./icon/sp_contact01.png);
+$url_3: url(./icon/sp_sales01.png);
+$url_4: url(./icon/sp_recruit01.png);
+
+//@extend-elements
+//original selectors
+//html, body, div, span, h1, h2, p, code, img, small, i, ul, li, article, footer, header, nav, section
+%extend_1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html {
+  overflow-y: scroll;
+  font-size: 62.5%;
+  @extend %extend_1;
+}
+body {
+  line-height: 1;
+  font: 13px/1.231 arial,helvetica,clean,sans-serif;
+  *font-size: small;
+  *font: x-small;
+  background: $white;
+  color: $color_mine_shaft_approx;
+  font-family: $font_1, $font_2, $font_3, $font_4, $font_5, $font_6, $font_7, $font_8, $font_9;
+  font-weight: 500;
+  width: 100%;
+  min-width: 320px;
+  overflow: hidden;
+  @extend %extend_1;
+}
+div {
+  @extend %extend_1;
+}
+span {
+  @extend %extend_1;
+}
+h1 {
+  @extend %extend_1;
+}
+h2 {
+  @extend %extend_1;
+}
+p {
+  @extend %extend_1;
+}
+code {
+  @extend %extend_1;
+  font-family: $font_0;
+  *font-size: 108%;
+  line-height: 100%;
+}
+img {
+  @extend %extend_1;
+  line-height: 1;
+  font-size: 0;
+  vertical-align: top;
+  height: auto;
+  max-width: 100%;
+}
+small {
+  @extend %extend_1;
+}
+i {
+  @extend %extend_1;
+}
+ul {
+  @extend %extend_1;
+  list-style: none;
+}
+li {
+  @extend %extend_1;
+}
+article {
+  @extend %extend_1;
+  display: block;
+}
+footer {
+  @extend %extend_1;
+  display: block;
+}
+header {
+  @extend %extend_1;
+  display: block;
+}
+nav {
+  @extend %extend_1;
+  display: block;
+}
+section {
+  @extend %extend_1;
+  display: block;
+}
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+  &:link {
+    color: $color_mine_shaft_approx;
+  }
+  &:visited {
+    color: $color_mine_shaft_approx;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $color_mine_shaft_approx;
+  }
+  &:active {
+    color: $color_mine_shaft_approx;
+  }
+}
+* {
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@media(max-width: 767px) {
+  .container {
+    width: 100%;
+    max-width: 640px;
+  }
+  .visible-xs {
+    display: block !important;
+  }
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media(min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .col-sm-3 {
+    float: left;
+    width: 22.97297%;
+    margin-left: 2.7027%;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .col-sm-9 {
+    float: left;
+    width: 74.32432%;
+    margin-left: 2.7027%;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+@media(min-width: 980px) {
+  .container {
+    width: 980px;
+  }
+  .col-md-3 {
+    float: left;
+    width: 22.97297%;
+    margin-left: 2.7027%;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .col-md-9 {
+    float: left;
+    width: 74.32432%;
+    margin-left: 2.7027%;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+@media(min-width: 1110px) {
+  .container {
+    width: 1110px;
+  }
+  .col-lg-3 {
+    float: left;
+    width: 22.97297%;
+    margin-left: 2.7027%;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:nth-child(4n + 1) {
+      margin-left: 0;
+    }
+  }
+  .col-lg-9 {
+    float: left;
+    width: 74.32432%;
+    margin-left: 2.7027%;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+.row {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.col-xs-12 {
+  width: 100%;
+}
+@media(min-width: 768px) and(max-width: 979px) {
+  .col-sm-3:nth-child(4n + 1) {
+    margin-left: 0;
+  }
+}
+@media only screen and(min-width: 980px) and(max-width: 1109px) {
+  .col-md-3:nth-child(4n + 1) {
+    margin-left: 0;
+  }
+  .f_info_tel a {
+    display: none;
+  }
+}
+.visible-xs {
+  display: none !important;
+}
+#page {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  overflow: hidden;
+}
+.gnavi {
+  float: left;
+  width: 71%;
+  height: 110px;
+  padding-top: 20px;
+  .en {
+    font-family: $font_10, $font_1, $font_2, $font_3, $font_4, $font_5, $font_6, $font_7, $font_8, $font_9;
+    font-weight: 500;
+    display: block;
+    font-size: 14px;
+  }
+  a {
+    vertical-align: middle;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateZ(0);
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 1px transparent;
+    //Instead of the line below you could use @include backface-visibility($visibility)
+    backface-visibility: hidden;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    color: $color_cod_gray_approx;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      background: $color_coral_reef_approx;
+      height: 1px;
+      //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+      transition-property: left, right;
+      //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+      transition-duration: 0.3s;
+      //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+      transition-timing-function: ease-out;
+    }
+    &:hover:before {
+      left: 0;
+      right: 0;
+    }
+    &:focus:before {
+      left: 0;
+      right: 0;
+    }
+    &:active:before {
+      left: 0;
+      right: 0;
+    }
+  }
+  ul {
+    display: table;
+    width: 100%;
+  }
+  li {
+    display: table-cell;
+    width: 15.5%;
+    height: 90px;
+    vertical-align: middle;
+    text-align: center;
+    &.sales_sp {
+      display: none;
+    }
+    &.works_sp {
+      display: none;
+    }
+  }
+  .ja {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .facebook {
+    vertical-align: top;
+    font-size: 24px;
+    .fa {
+      display: inline-block;
+      margin-top: 28px;
+    }
+  }
+}
+.f_menu_block {
+  font-family: $font_10, $font_1, $font_2, $font_3, $font_4, $font_5, $font_6, $font_7, $font_8, $font_9;
+  font-weight: 500;
+  width: 25%;
+  float: left;
+  font-size: 14px;
+  ul {
+    margin-top: 1em;
+    font-size: 12px;
+    li {
+      margin-left: 1em;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $color_mine_shaft_approx;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .fa-facebook-square {
+    font-size: 24px;
+    color: $color_cod_gray_approx;
+  }
+  .fa-instagram {
+    font-size: 24px;
+    color: $color_cod_gray_approx;
+  }
+  li + li {
+    margin-top: 1em;
+  }
+}
+.lower_ttl_main {
+  font-family: $font_11, $font_1, $font_2, $font_3, $font_4, $font_5, $font_6, $font_7, $font_8, $font_9;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color_cod_gray_approx;
+  letter-spacing: 3px;
+  font-size: 40px;
+  position: relative;
+  text-align: center;
+}
+.fa {
+  font-family: $font_12, $font_1, $font_2, $font_3, $font_4, $font_5, $font_6, $font_7, $font_8, $font_9;
+  font-weight: normal !important;
+}
+.btn {
+  text-align: center;
+}
+.l-contents {
+  *zoom: 1;
+  _zoom: 1;
+  //Instead of the line below you could use @include word-break($value)
+  word-break: normal;
+  word-wrap: break-word;
+  line-height: 1.8;
+  font-size: 1.6rem;
+  margin-bottom: 70px;
+  background: $white;
+  position: relative;
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+  h1 {
+    line-height: 1.4;
+  }
+  h2 {
+    line-height: 1.4;
+  }
+}
+.pagetop {
+  background: $color_cod_gray_approx;
+  color: $white;
+  text-align: center;
+  position: relative;
+  a {
+    display: block;
+    width: 100%;
+    max-width: 1110px;
+    color: $white;
+    text-decoration: none;
+    padding: 5px 0;
+    margin: 0 auto;
+  }
+  .fa {
+    font-size: 28px;
+  }
+}
+.home {
+  .l-contents {
+    margin-bottom: 0;
+  }
+  .l-header {
+    position: absolute;
+    left: 0;
+    top: -220px;
+    opacity: 0;
+    //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+    transition-property: all;
+    //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+    transition-duration: 1s;
+    //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+    transition-timing-function: ease-in-out;
+  }
+}
+.l-header {
+  width: 100%;
+  background: $white;
+  position: relative;
+  z-index: 100;
+  .logo {
+    float: right;
+    width: 10.63%;
+    margin: 33px 0 0;
+  }
+}
+@media only screen and(max-width: 767px) {
+  .gnavi {
+    display: none;
+    float: none;
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    background: $white_90;
+    li {
+      display: block;
+      height: auto;
+      border-bottom: 1px dotted $color_silver_approx;
+      width: 100%;
+      padding: 3px 0;
+      &.sales {
+        display: none;
+      }
+      &.works {
+        display: none;
+      }
+      &.sales_sp {
+        display: block;
+      }
+      &.works_sp {
+        display: block;
+      }
+    }
+    a {
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: none;
+      padding: 12px 0;
+    }
+    ul {
+      display: block;
+    }
+    .en {
+      display: none;
+    }
+    .ja {
+      font-size: 16px;
+      margin-top: 0;
+    }
+    .facebook {
+      display: none;
+    }
+  }
+  .lower_ttl_main {
+    font-size: 32px;
+  }
+  .l-header {
+    height: 60px;
+    z-index: 9999;
+    .logo {
+      float: none;
+      width: 80px;
+      margin: 0 auto;
+      max-height: 60px;
+      overflow: hidden;
+      a {
+        display: block;
+        padding: 18px 0 12px;
+      }
+    }
+  }
+  #sp_menu {
+    display: block;
+  }
+  .follow_contact {
+    display: none;
+  }
+  .f_nav {
+    padding: 0 15px;
+  }
+  .f_menu {
+    display: none;
+  }
+  .l-footer {
+    padding-bottom: 70px;
+  }
+  .f_sns {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  .sp_f_nav {
+    display: block;
+  }
+  .f_bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  #fixed_footer {
+    bottom: -70px;
+    //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+    transition-property: all;
+    //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+    transition-duration: 0.3s;
+    //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+    transition-timing-function: ease;
+    //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+    transition-delay: 0.3s;
+  }
+  #ttl_line {
+    width: 100% !important;
+  }
+  .lower_ttl {
+    position: relative;
+    padding: 45px 0 25px;
+    margin-bottom: 50px;
+  }
+  .home .l-header {
+    top: 0;
+    opacity: 1;
+  }
+  .f_info_tel span {
+    display: none;
+  }
+  .f_bnr .btn {
+    display: none;
+  }
+}
+#sp_menu {
+  display: none;
+  background: $url_0 no-repeat center center;
+  background-size: auto 30%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+  transition-property: all;
+  //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+  transition-duration: 0.3s;
+  //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+  transition-timing-function: ease;
+}
+.l-footer {
+  width: 100%;
+  position: relative;
+  background: $white;
+  .copyright {
+    text-align: center;
+    font-size: 13px;
+    margin: 30px auto;
+  }
+}
+.f_info {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 40px auto;
+  a {
+    color: $color_mine_shaft_approx;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.f_info_logo {
+  font-size: 16px;
+  font-weight: normal;
+}
+.f_info_tel_fax {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+  a {
+    color: $color_mine_shaft_approx;
+    text-decoration: none;
+  }
+  .fa {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 7px;
+  }
+}
+.f_info_tel {
+  display: inline-block;
+}
+.f_info_fax {
+  display: inline-block;
+  margin-left: 40px;
+  .fa {
+    font-size: 16px;
+  }
+}
+.f_sns {
+  display: none;
+}
+.f_nav {
+  padding: 0 60px;
+  margin: 30px auto;
+}
+.f_bnr {
+  .btn {
+    font-size: 15px;
+    font-weight: 500;
+    a {
+      //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+      transition-property: all;
+      //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+      transition-duration: 0.3s;
+      //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+      transition-timing-function: ease;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 0;
+      display: block;
+      background: $color_cod_gray_approx;
+      color: $white;
+      padding: 10px 25px;
+      text-align: left;
+      text-decoration: none;
+      .fa {
+        margin-right: 15px;
+        vertical-align: middle;
+      }
+    }
+  }
+  li + li {
+    margin-top: 10px;
+  }
+  .btn_contact a:hover {
+    background: $color_sushi_approx;
+  }
+  .btn_event a:hover {
+    background: $color_sea_buckthorn_approx;
+  }
+}
+.follow_contact {
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  z-index: 10000;
+  li {
+    a {
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: $white;
+      display: block;
+      width: 100px;
+      height: 100px;
+      padding: 30px 0;
+      line-height: 20px;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 50px;
+      border: 1px solid $color_sea_buckthorn_approx;
+      background: $color_sea_buckthorn_approx;
+      position: relative;
+      .fa {
+        display: block;
+        font-size: 16px;
+      }
+      &:hover::after {
+        opacity: 1;
+        border-width: 7px;
+      }
+    }
+    a::after {
+      content: "";
+      display: block;
+      width: 98px;
+      height: 98px;
+      border: 0 solid $white;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 50px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      //Instead of the line below you could use @include box-sizing($bs)
+      box-sizing: border-box;
+      opacity: 0;
+      //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+      transition-property: all;
+      //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+      transition-duration: 0.3s;
+      //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+      transition-timing-function: ease;
+    }
+    &.follow_contact_event {
+      margin-top: 10px;
+    }
+    &.follow_contact_sales {
+      margin-top: 10px;
+      a {
+        background-color: $color_keppel_approx;
+        border-color: $color_keppel_approx;
+      }
+    }
+    &.follow_contact_contact a {
+      background-color: $color_sushi_approx;
+      border-color: $color_sushi_approx;
+    }
+  }
+}
+.sp_f_nav {
+  display: none;
+  bottom: -70px;
+  ul {
+    overflow: hidden;
+    margin: 0 -1px;
+  }
+  li {
+    float: left;
+    width: 25%;
+    a {
+      vertical-align: middle;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      background: $color_cod_gray_approx no-repeat center 15px;
+      background-size: auto 20px;
+      padding-top: 45px;
+      color: $white;
+      font-size: 11px;
+      height: 70px;
+      border-left: 1px solid $white;
+      position: relative;
+      small {
+        display: block;
+        font-size: 8px;
+      }
+    }
+    a::after {
+      content: "";
+      display: block;
+      border: 5px solid transparent;
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .sp_f_nav_tel {
+    background: $color_cod_gray_approx;
+    text-align: center;
+    border-top: 1px solid $white;
+    a {
+      color: $white;
+      text-decoration: none;
+      background-position-x: 8%;
+      width: 100%;
+      display: inline-block;
+      background-repeat: no-repeat;
+      padding: 10px;
+      background-size: 4%;
+      background-position-y: 6px;
+    }
+  }
+  .sp_f_nav_event {
+    a {
+      background-image: $url_1;
+    }
+    a::after {
+      border-left-color: $color_sea_buckthorn_approx;
+      border-top-color: $color_sea_buckthorn_approx;
+    }
+  }
+  .sp_f_nav_contact {
+    a {
+      background-image: $url_2;
+      background-size: auto 18px;
+    }
+    a::after {
+      border-left-color: $color_sushi_approx;
+      border-top-color: $color_sushi_approx;
+    }
+  }
+  .sp_f_nav_sales {
+    a {
+      background-image: $url_3;
+      background-size: auto 18px;
+    }
+    a::after {
+      border-left-color: $color_keppel_approx;
+      border-top-color: $color_keppel_approx;
+    }
+  }
+  .sp_f_nav_recruit {
+    a {
+      background-image: $url_4;
+      background-size: auto 18px;
+    }
+    a::after {
+      border-left-color: $color_well_read_approx;
+      border-top-color: $color_well_read_approx;
+    }
+  }
+}
+.lower_ttl_sub {
+  font-size: 14px;
+  margin: 15px auto 20px;
+  text-align: center;
+}
+@media only screen and(min-width: 768px) and(max-width: 979px) {
+  .gnavi {
+    width: 78%;
+    a {
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: none;
+    }
+  }
+  .lower_ttl_main {
+    font-size: 32px;
+  }
+  .home .l-header {
+    top: 0;
+    opacity: 1;
+  }
+  .f_info_tel span {
+    display: none;
+  }
+  .l-header .logo {
+    width: 15.364%;
+  }
+}
+@media only screen and(min-width: 1110px) {
+  .f_info_tel a {
+    display: none;
+  }
+}
+.lower_ttl {
+  position: relative;
+  padding: 90px 0 50px;
+  margin-bottom: 100px;
+}
+.lower_ttl_main::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 0;
+  margin: 0 auto 12px;
+  border-top: 3px solid $color_coral_reef_approx;
+}
+#ttl_line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: $color_coral_reef_approx;
+}
+@media only screen and(min-width: 768px ) {
+  .gnavi {
+    width: 84%;
+    li {
+      width: 11%;
+    }
+    .facebook .fa {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}

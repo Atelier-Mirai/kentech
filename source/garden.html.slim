@@ -1,0 +1,158 @@
+#page
+
+header
+  h1.logo
+    a href="#"
+      = image_tag 'logo_mark.png'
+  nav.gnavi
+    ul
+      li
+        a href="#"
+          | ホーム
+      li.computer.only
+        a href="#"
+          | 事業紹介(PC)
+      li.mobile.only
+        a href="#"
+          | 事業紹介(SP)
+      li
+        a href="#"
+          | 会社案内
+      li
+        a href="#"
+          | お問い合わせ
+
+  span#sp_menu.mobile.only
+    i.fas.fa-bars.fa-3x
+    / i.fas.fa-times.fa-3x
+    / js でアクティブか否かで切り替え
+    / background-image がよいか
+
+section.literature
+  h2.centered.text
+    | 文學紹介
+  p.lower_ttl_sub
+    | 名作を読む
+    br
+    | 宮沢賢治 ・ 夏目漱石 ・ 芥川龍之介 ・ 森鷗外
+  #ttl_line
+
+  article#pora-no
+    h3
+      | ポラーノの広場 宮沢賢治
+    p
+      | あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波
+    p
+      | またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・デストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。では、わたくしはいつかの小さなみだしをつけながら、しずかにあの年のイーハトーヴォの五月から十月までを書きつけましょう。
+
+  article#botchan
+    h3
+      | 坊ちゃん 夏目漱石
+    p
+      | 親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。
+
+  article#toshishun
+    h3
+      | 杜子春 芥川龍之介
+    p
+      | 或春の日暮です。
+    p
+      | 唐の都洛陽の西の門の下に、ぼんやり空を仰いでゐる、一人の若者がありました。
+    p
+      | 若者は名は杜子春といつて、元は金持の息子でしたが、今は財産を費ひ尽して、その日の暮しにも困る位、憐な身分になつてゐるのです。
+    p
+      | 何しろその頃洛陽といへば、天下に並ぶもののない、繁昌を極めた都ですから、往来にはまだしつきりなく、人や車が通つてゐました。門一ぱいに当つてゐる、油のやうな夕日の光の中に、老人のかぶつた紗しやの帽子や、土耳古の女の金の耳環や、白馬に飾つた色糸の手綱が、絶えず流れて行く容子は、まるで画のやうな美しさです。
+
+  article#takasebune
+    h3
+      | 高瀬舟 森鷗外
+    p
+      | 高瀬舟は京都の高瀬川を上下する小舟である。徳川時代に京都の罪人が遠島を申し渡されると、本人の親類が牢屋敷へ呼び出されて、そこで暇乞をすることを許された。それから罪人は高瀬舟に載せられて、大阪へ廻されることであつた。それを護送するのは、京都町奉行の配下にゐる同心で、此同心は罪人の親類の中で、主立つた一人を大阪まで同船させることを許す慣例であつた。これは上へ通つた事ではないが、所謂大目に見るのであつた、默許であつた。
+
+.pagetop
+  a href="#page"
+    i.fas.fa-angle-up.fa-2x
+
+
+footer.l-footer
+  .container
+    section.f_info
+      h2.f_info_logo
+        | 文學堂 株式会社
+      ul.f_info_tel_fax
+        li.f_info_tel
+          i.fas.fa-phone
+          span href="tel:052-234-5678"
+            | 052-234-5678
+          a href="tel:052-234-5678"
+            | 052-234-5678
+        li.f_info_fax
+          i.fas.fa-fax
+          |  052-234-5678
+
+    p.copyright
+      | © 文學堂 Inc. All rights reserved.
+
+  /! モバイル用固定フッター
+  #fixed_footer.mobile.only
+    nav
+      ul
+        li
+          a href="#pora-no"
+            i.fas.fa-book.fa-2x
+            br
+            span
+              | ポラーノの広場
+        li
+          a href="#botchan"
+            i.fas.fa-calendar.fa-2x
+            br
+            span
+              | 坊ちゃん
+        li
+          a href="#toshishun"
+            i.fas.fa-home.fa-2x
+            br
+            span
+              | 杜子春
+        li
+          a href="#takasebune"
+            i.fas.fa-user.fa-2x
+            br
+            span
+              | 高瀬舟
+
+      .telephone
+        a href="tel:052-234-5678"
+          | 電話をかける
+          small
+            | 9:00～18:00 / 日曜祝日休
+
+
+/! コンピュータ用 追随メニュー
+.follow_contact.computer.only
+  ul
+    li
+      a href="#pora-no"
+        i.fas.fa-book.fa-lg
+        br
+        | ポラーノの
+        br
+        | 広場
+    li
+      a href="#botchan"
+        i.fas.fa-calendar.fa-lg
+        br
+        | 坊ちゃん
+    li
+      a href="#toshishun"
+        i.fas.fa-home.fa-lg
+        br
+        | 杜子春
+    li
+      a href="#takasebune"
+        i.fas.fa-user.fa-lg
+        br
+        | 高瀬舟
+
+script src="garden/app.js"

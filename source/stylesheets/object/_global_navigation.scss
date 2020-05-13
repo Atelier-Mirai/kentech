@@ -1,0 +1,70 @@
+/*-----------------------------------------------------------------------------
+  Global Navigation
+-----------------------------------------------------------------------------*/
+
+/*
+  mobile
+-----------------------------------------------------------------------------*/
+.gnavi {
+  background: $sakurairo;
+  width: 100%;
+  ul {
+    display: block;
+    padding: 0;
+    li {
+      display: block;
+      width: 100%;
+      a {
+        font-size: 1.4rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .gnavi {
+    display: block;
+    height: auto;
+    padding-top: 20px;
+    background: $natsukazeiro;
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+      grid-auto-flow: column;
+      li {
+        text-align: center;
+        border-bottom: none;
+        a {
+          position: relative;
+          // display: inline-block;
+          color: $nibiiro;
+          text-decoration: none;
+          text-align: center;
+          padding: 10px 0;
+          &:before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            background: $botaniro;
+            height: 2px;
+            transition-property: left, right;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+          }
+          &:hover:before {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}

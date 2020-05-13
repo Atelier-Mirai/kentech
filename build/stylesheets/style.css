@@ -909,27 +909,34 @@ body.top {
 /*
   固定フッター
 -------------------------------*/
-footer.fixed_footer nav ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
-  /* 丸角四角形のボタンにする */ }
-  footer.fixed_footer nav ul li {
-    width: 100%;
-    font-size: 20px;
-    line-height: 1.2;
-    padding: 6px 12px;
-    border-radius: 18px;
-    text-align: center;
-    background: #0d0d0d; }
-    footer.fixed_footer nav ul li:hover {
-      background: #e7609e; }
-    footer.fixed_footer nav ul li a {
-      text-decoration: none;
-      color: #def3de; }
+.fixed_footer {
+  position: fixed;
+  top: 80%;
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto; }
+  .fixed_footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    /* 丸角四角形のボタンにする */ }
+    .fixed_footer nav ul li {
+      width: 100%;
+      font-size: 20px;
+      line-height: 1.2;
+      padding: 6px 12px;
+      border-radius: 18px;
+      text-align: center;
+      background: #0d0d0d; }
+      .fixed_footer nav ul li:hover {
+        background: #e7609e; }
+      .fixed_footer nav ul li a {
+        text-decoration: none;
+        color: #def3de; }
 
 /* デスクトップ版 */
 /*===============================
@@ -1070,7 +1077,7 @@ header {
 -------------------------------*/
 .hero {
   grid-row: hero;
-  grid-column: 1 / -1; }
+  grid-column: 1 / -1 !important; }
   .hero .box {
     position: relative;
     height: 512px; }

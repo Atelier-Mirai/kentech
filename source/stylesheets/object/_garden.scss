@@ -1,0 +1,448 @@
+/*=============================================================================
+  Garden
+=============================================================================*/
+
+
+/*-----------------------------------------------------------------------------
+  html
+-----------------------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  font-size: 62.5%;
+
+  /* レスポンシブな文字サイズ */
+  /* 今すぐ使えるCSSレシピブック 96より */
+  font-size: 14px;
+  @media (min-width: 320px) {
+    font-size: calc( (18 - 14) * ((100vw - 320px) / (960 - 320)) + 14px);
+  }
+  @media (min-width: 960px) {
+    font-size: 18px;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+  mobile / computer utility
+-----------------------------------------------------------------------------*/
+.mobile.only {
+  @media(min-width: 768px) {
+    display: none;
+  }
+}
+
+.computer.only {
+  @media(max-width: 767.98px) {
+    display: none;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+  本文
+-----------------------------------------------------------------------------*/
+.literature {
+  padding-left: 20px;
+  padding-right: 20px;
+  h3 {
+    font-size: 1.4rem;
+  }
+  article {
+    p {
+      line-height: 2;
+      font-size: 1rem;
+      text-indent: 1rem;
+    }
+    margin-bottom: 1rem;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+  header
+-----------------------------------------------------------------------------*/
+header {
+  display: grid;
+
+  /* Mobile */
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr;
+  justify-content: center;
+  .logo {
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    img {
+      width: 80px;
+      height: auto;
+    }
+  }
+  .gnavi {
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+  }
+
+  /* Computer */
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 6fr;
+    justify-content: center;
+    .logo {
+      grid-column: 1;
+      justify-self: center;
+      align-self: center;
+      img {
+        width: 80px;
+        height: auto;
+      }
+    }
+    .gnavi {
+      grid-column: 2;
+      justify-self: center;
+      align-self: center;
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+  Global Navigation
+-----------------------------------------------------------------------------*/
+@import 'global_navigation';
+
+/*-----------------------------------------------------------------------------
+  Page Top
+-----------------------------------------------------------------------------*/
+.pagetop {
+  background: $kurohairo;
+  text-align: center;
+  a {
+    color: $sakurairo;
+    text-decoration: none;
+    padding: 10px 0;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+  固定フッター (モバイル用)
+-----------------------------------------------------------------------------*/
+#fixed_footer {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  bottom: -70px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0.3s;
+  &.active {
+    bottom: 0;
+    span {
+      display: inline-block;
+      margin: 6px 0;
+    }
+  }
+
+  nav {
+    bottom: -70px;
+    /* 各書籍へのリンク */
+    ul {
+      overflow: hidden;
+      margin: 0 -1px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-flow: column;
+      li {
+        a {
+          vertical-align: middle;
+          text-align: center;
+          text-decoration: none;
+          display: block;
+          background: $kurohairo;
+          padding-top: 12px;
+          color: $sakurairo;
+          font-size: 11px;
+          height: 60px;
+          border-left: 1px solid $sakurairo;
+          position: relative;
+          span {
+            display: inline-block;
+            margin: 12px 0;
+          }
+        }
+        a::after {
+          content: "";
+          display: block;
+          border: 5px solid transparent;
+          border-left-color: $sanaeiro;
+          border-top-color: $sanaeiro;
+          width: 0;
+          height: 0;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+
+    /* 電話をかける */
+    .telephone {
+      background: $kurohairo;
+      text-align: center;
+      border-top: 1px solid $sakurairo;
+      a {
+        color: $sakurairo;
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+        padding: 10px;
+        small {
+          display: block;
+          font-size: 9px;
+        }
+      }
+    }
+  }
+}
+
+
+/*-----------------------------------------------------------------------------
+  コンピュータ用 追随メニュー
+-----------------------------------------------------------------------------*/
+.follow_contact {
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  z-index: 10000;
+  ul {
+    list-style: none;
+    li {
+      a {
+        font-size: 0.9rem;
+        text-align: center;
+        text-decoration: none;
+        color: $sakurairo;
+        display: block;
+        width: 100px;
+        height: 100px;
+        padding: 30px 0;
+        line-height: 20px;
+        border-radius: 50px;
+        border: 1px solid $shinonomeiro;
+        background: $shinonomeiro;
+        position: relative;
+        &:hover::after {
+          opacity: 1;
+          border-width: 7px;
+        }
+      }
+      a::after {
+        content: "";
+        display: block;
+        width: 98px;
+        height: 98px;
+        border: 0 solid $sakurairo;
+        border-radius: 50px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        box-sizing: border-box;
+        opacity: 0;
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+      }
+    }
+  }
+}
+
+
+@media only screen and(max-width: 767px) {
+  #sp_menu {
+    display: block;
+  }
+  .follow_contact {
+    display: none;
+  }
+  .f_nav {
+    padding: 0 15px;
+  }
+  .f_menu {
+    display: none;
+  }
+  .l-footer {
+    padding-bottom: 70px;
+  }
+  .f_sns {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  .sp_f_nav {
+    display: block;
+  }
+
+  #ttl_line {
+    width: 100% !important;
+  }
+  .lower_ttl {
+    position: relative;
+    padding: 45px 0 25px;
+    margin-bottom: 50px;
+  }
+  .home .l-header {
+    top: 0;
+    opacity: 1;
+  }
+  .f_info_tel span {
+    display: none;
+  }
+  .f_bnr .btn {
+    display: none;
+  }
+}
+#sp_menu {
+  // display: none;
+  background: 0 no-repeat center center;
+  background-size: auto 30%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+#sp_menu.is_active {
+  // background: $url_5 no-repeat center center;
+  // background-size: auto 30%;
+}
+
+.l-footer {
+  width: 100%;
+  position: relative;
+  background: $sakurairo;
+  .copyright {
+    text-align: center;
+    font-size: 13px;
+    margin: 30px auto;
+  }
+}
+.f_info {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 40px auto;
+  a {
+    color: _mine_shaft_approx;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.f_info_logo {
+  font-size: 16px;
+  font-weight: normal;
+}
+.f_info_tel_fax {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+  a {
+    color: $kurohairo;
+    text-decoration: none;
+  }
+  .fa {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 7px;
+  }
+}
+.f_info_tel {
+  display: inline-block;
+}
+.f_info_fax {
+  display: inline-block;
+  margin-left: 40px;
+  .fa {
+    font-size: 16px;
+  }
+}
+.f_nav {
+  padding: 0 60px;
+  margin: 30px auto;
+}
+.f_bnr {
+  .btn {
+    font-size: 15px;
+    font-weight: 500;
+    a {
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+      border-radius: 0;
+      display: block;
+      background: $nibiiro;
+      color: $sakurairo;
+      padding: 10px 25px;
+      text-align: left;
+      text-decoration: none;
+      .fa {
+        margin-right: 15px;
+        vertical-align: middle;
+      }
+    }
+  }
+  li + li {
+    margin-top: 10px;
+  }
+  .btn_contact a:hover {
+    background: $sanaeiro;
+  }
+  .btn_event a:hover {
+    background: $shinonomeiro;
+  }
+}
+
+
+
+
+
+.lower_ttl_sub {
+  font-size: 14px;
+  margin: 15px auto 20px;
+  text-align: center;
+}
+
+
+@media only screen and(min-width: 1110px) {
+  .f_info_tel a {
+    display: none;
+  }
+}
+.lower_ttl {
+  position: relative;
+  padding: 90px 0 50px;
+  margin-bottom: 100px;
+}
+.lower_ttl_main::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 0;
+  margin: 0 auto 12px;
+  border-top: 3px solid $otomeiro;
+}
+#ttl_line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: $otomeiro;
+}

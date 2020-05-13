@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/*
+Theme Name: Union Theme
+Author: unionnet
+Author URI: https://unionnet.jp
+Version: 1.4
+*/
+
+.index_event_ttl {
+min-height: 2.8em;
+}
+
+.stepbystep,
+.passive-merits {
+	margin-top: 30px;
+	list-style-type: none;
+}
+
+.stepbystep .col1,
+.passive-merits .col1 {
+	text-align: center;
+}
+
+.stepbystep .col2,
+.passive-merits .col2 {
+	margin-top: 20px
+}
+
+
+@media only screen and ( min-width: 768px ) {
+	.gnavi { width: 84%; }
+	.gnavi li {
+		width: 11%;
+	}
+	.gnavi .facebook .fa  { 
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.stepbystep,
+	.passive-merits {
+		margin-top: 50px;
+		overflow: hidden;
+	}
+	
+	.stepbystep .col1,
+	.passive-merits .col1 {
+		max-width: 210px;
+		float: left;
+		margin-right: 50px
+	}
+	.passive-merits .col1 {
+		max-width: 330px;
+	}
+	
+	
+	.stepbystep .col2,
+	.passive-merits .col2 {
+		margin-top: 30px
+	}
+}
+
+.detail-desc {
+	margin-top: 30px
+	overflow: hidden;
+}
+.desc-img-left {
+	text-align: center;
+}
+.desc-img-right {
+	text-align: center;
+}
+.detail-desc-text {
+	margin-top: 20px
+	
+}
+.staff-takezono-profile {
+	border-top: 1px solid #111;
+	border-bottom: 1px solid #111;
+	padding: 15px 0;
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+@media only screen and ( min-width: 768px ) {
+	
+	.detail-desc {
+		margin-top: 50px
+		overflow: hidden;
+	}
+	.desc-img-left {
+		float: left;
+		max-width: 50%;
+		padding-right: 30px;
+	}
+	.desc-img-right {
+		float: right;
+		max-width: 50%;
+		padding-left: 30px;
+	}
+	.detail-desc-text {
+		overflow: hidden;
+	}
+	
+	
+	.staff-takezono-profile {
+		padding: 30px 0;
+		margin: 50px auto;
+	}
+	.staff-takezono-profile .profile-img {
+		width: 35%;
+		float: left;
+		text-align: center;
+	}
+	.staff-takezono-profile .profile-img img {
+		max-width: 225px
+	}
+	.staff-takezono-profile .profile-text {
+		width: 65%;
+		float: right;
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+	.gnavi li {
+		width: 100%;
+		padding: 3px 0;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.main_visual {
+		display: none;
+	}
+	.main_visual_sp {
+		display: block;
+		width: 100%;
+		height: 0;
+		padding-top: 93.75%;
+	}
+}
+@media only screen and (min-width: 641px) {
+	.main_visual_sp {
+		display: none;
+	}
+	.main_visual {
+		display: block;
+	}
+}
+
+
+
+
+.index_social{
+	border-top: solid 1px #EEE;
+    border-bottom: solid 1px #EEE;
+    margin-top: 50px;
+}
+.info_area {
+    display: block;
+    padding: 17px 10px 15px;
+    margin: 15px;
+    text-decoration: none;
+	text-align: center;
+}
+.info_area:hover{
+/*	background-color: #c9bc9c;*/
+	background-color: #f4f2eb; 
+/*	color: #FFF;*/
+    transition: all 0.5s ease;
+}
+.area_typo_social{
+    padding-top: 20px;
+    font-size: 16px;
+	text-align: center;
+}
+.typo_social{
+	font-size: 36px;
+    font-family: "Oswald", "游ゴシック", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+    font-weight: 700;
+    color: #c9bc9c;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+.typo_social_sub{
+	font-size: 14px;
+}
+.pr10{
+	padding-right: 10px;
+}
+.line_qr{
+    margin-top: -8px;
+    margin-left: 3px;
+}
+.gnavi .facebook .suumoarea {
+    display: inline-block;
+    margin-top: 24px;
+}
+@media (max-width: 767px){
+.index_social {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px)
+{
+.gnavi .facebook .suumoarea {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.gnavi .facebook .suumoarea {
+    display: inline-block;
+    margin-top: 28px;
+}
+
+.status_closed {
+  background-image: url(../img/ico/ico_status_closed.png.html);
+}
