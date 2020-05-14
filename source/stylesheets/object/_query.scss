@@ -14,6 +14,7 @@
   display: grid;
   grid-template-columns: 20px 1fr 20px;
   row-gap: 10px;
+  margin-bottom: 90px;
 
   & > * {
     grid-column: 1 / -1;

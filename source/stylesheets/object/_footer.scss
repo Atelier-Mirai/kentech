@@ -32,6 +32,7 @@ footer.footer.mobile.only {
 
     .logo_and_nav {
       grid-column: 1 / -1;
+      margin: 0 -20px;
 
       /* 美しいグラデーションをCSSで実装 */
       /* https://www.webcreatorbox.com/tech/css-gradient */
@@ -81,6 +82,7 @@ footer.footer.mobile.only {
             a {
               transform: rotate(-45deg);
               text-decoration: none;
+              font-size: 14px;
               color: $sakurairo;
               text-align: center;
             }
@@ -100,6 +102,7 @@ footer.footer.mobile.only {
     }
     & > p {
       grid-column: 1 / -1;
+      margin: 0 -20px 0 -20px;
       grid-row: 3;
 
       line-height: 2.5;

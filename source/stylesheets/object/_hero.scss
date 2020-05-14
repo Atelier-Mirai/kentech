@@ -11,10 +11,9 @@
 -----------------------------------------------------------------------------*/
 .hero {
   grid-row: hero;
-  grid-column: 1 / -1 !important;
-
   .box {
     position: relative;
+    margin: 0 -20px;
     height: 512px;
     .slide {
       position: absolute;
@@ -36,11 +35,13 @@
   }
 
   @keyframes fade {
-      0% { opacity: 0; }
-      5% { opacity: 1; }
-     25% { opacity: 1; }
-     30% { opacity: 0; }
-    100% { opacity: 0; }
+      0% { opacity:  .0; }
+      5% { opacity:  .1; }
+     20% { opacity:  .9; }
+     30% { opacity: 1.0; }
+     70% { opacity:  .8; }
+     90% { opacity:  .1; }
+    100% { opacity:  .0; }
   }
 
   img {
