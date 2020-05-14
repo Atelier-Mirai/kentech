@@ -2,6 +2,9 @@
 // Margin and Padding
 // Bootstrap utilities/_spacing.scss
 
+/*
+  margin, padding 調整用
+-----------------------------------------------------------------------------*/
 $spacers: (
   0: 0,
   1: 0.25rem,
@@ -56,6 +59,9 @@ $spacers: (
   margin-left: auto !important;
 }
 
+/*
+  幅指定用
+-----------------------------------------------------------------------------*/
 $values: 25, 50, 75, 100;
 @each $prop, $abbrev in (width: w, height: h) {
   @each $value in $values {
@@ -74,7 +80,9 @@ $values: 25, 50, 75, 100;
   height: auto !important;
 }
 
-
+/*
+  Mobile Only Hide, Computer Only Hide
+-----------------------------------------------------------------------------*/
 /* Mobile Only Hide */
 @media (max-width: 767.98px) {
   .computer.only {

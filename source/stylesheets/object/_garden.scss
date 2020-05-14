@@ -84,9 +84,12 @@ header {
   /* Computer */
   @media (min-width: 768px) {
     grid-template-columns: 1fr 6fr;
+    grid-template-rows: 80px;
+
     justify-content: center;
     .logo {
       grid-column: 1;
+      grid-row: 1;
       justify-self: center;
       align-self: center;
       img {
@@ -96,6 +99,7 @@ header {
     }
     .gnavi {
       grid-column: 2;
+      grid-row: 1;
       justify-self: center;
       align-self: center;
     }

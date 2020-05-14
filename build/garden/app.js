@@ -12,7 +12,7 @@ function dropping_header() {
 //Smartphone menu
 function sp_menu() {
   var winW = $(this).innerWidth();
-  $('#sp_menu').click(function() {
+  $('#sp_menu').on.('click', function() {
     $(this).stop(true, true).toggleClass('active');
     $('.gnavi').stop(true, true).slideToggle();
   });
